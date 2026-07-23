@@ -2,37 +2,30 @@
 
 WebGL experience for **Penguin** — engineered crystal growth / synthetic crystallography.
 
-High-purity crystals for semiconductors, lasers, optics, quantum devices, and advanced materials. Built as a static site (Svelte loader + Three.js), deployed on Vercel.
+High-purity crystals for semiconductors, lasers, optics, quantum devices, and advanced materials.
 
 ## Live
 
-Production deploy is linked after Vercel setup (see Actions / Vercel dashboard).
+**https://penguin-inc.vercel.app**
+
+## GitHub
+
+https://github.com/VegasCryptoAgent/penguin-inc
 
 ## Local development
 
 ```bash
-# Option A — Python SPA server
 python3 server.py 5173
-
-# Option B — any static server (portfolio routes need SPA fallback)
-npx serve -s .
 ```
 
 Open http://127.0.0.1:5173/
 
 ## Stack
 
-- Static `index.html` + Vite/Svelte bootstrap
-- WebGL scene (Draco meshes, KTX2 textures, Basis transcoder)
+- Static `index.html` + Svelte bootstrap + Three.js WebGL
+- Draco / KTX2 / Basis assets
 - SPA routes: `/` and `/portfolio/:project`
-
-## Deploy (Vercel)
-
-Static hosting with SPA rewrites in `vercel.json`. No build step required.
-
-```bash
-vercel --prod
-```
+- Deployed on **Vercel** (CDN + SPA rewrites in `vercel.json`)
 
 ## Social
 
